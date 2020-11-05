@@ -1,0 +1,25 @@
+mport tkinter as tk
+
+
+window = tk.Tk()
+window.title("Wheater Widget")
+window.columnconfigure(0,weight=1,minsize=100)
+window.rowconfigure(0, weight=1, minsize=150)
+
+frame=tk.Frame(master=window)
+frame.grid(row=0, column=0)
+
+label=tk.Label(master=frame, text="Your City:")
+label.grid(row=0,column=0,sticky="e")
+entry=tk.Entry(master=frame, width=50)
+entry.grid(row=0, column=1)
+button=tk.Button(master=frame, text="Search!")
+button.grid(row=0, column=2)
+
+frame1=tk.Frame(master=window)
+frame1.grid(row=2,column=0)
+label1=tk.Label(master=frame1, text="+22 Celsius")
+label1.pack()
+
+
+window.mainloop()
